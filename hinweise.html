@@ -31,21 +31,17 @@ header {
   text-align: center;
   padding: 80px 20px;
   position: relative;
-  z-index: 1;
 }
 
-/* Overlay */
 header::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
-  z-index: 0;
 }
 
 header h1 {
   position: relative;
-  z-index: 2;
 }
 
 /* NAV */
@@ -62,7 +58,7 @@ nav a {
   font-weight: bold;
 }
 
-/* SECTION */
+/* CONTENT */
 section {
   background: white;
   max-width: 900px;
@@ -72,7 +68,7 @@ section {
   transition: 0.3s;
 }
 
-/* 🌙 DARK MODE BUTTON */
+/* 🌙 BUTTON */
 .toggle {
   position: fixed;
   top: 10px;
@@ -85,15 +81,14 @@ section {
   border-radius: 6px;
   cursor: pointer;
 }
+
+/* 💾 Dark Mode speichern */
 </style>
 </head>
 
 <body>
 
-<!-- DARK MODE BUTTON -->
-<button class="toggle" onclick="document.body.classList.toggle('dark')">
-🌙 Dark Mode
-</button>
+<button class="toggle" onclick="toggleDark()">🌙 Dark Mode</button>
 
 <header>
 <h1>⚠️ Hinweise</h1>
@@ -122,6 +117,24 @@ section {
 </ul>
 
 </section>
+
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")) {
+    localStorage.setItem("darkmode", "1");
+  } else {
+    localStorage.removeItem("darkmode");
+  }
+}
+
+window.onload = function() {
+  if(localStorage.getItem("darkmode") === "1") {
+    document.body.classList.add("dark");
+  }
+}
+</script>
 
 </body>
 </html>
