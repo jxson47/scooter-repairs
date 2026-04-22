@@ -31,18 +31,21 @@ header {
   text-align: center;
   padding: 80px 20px;
   position: relative;
+  z-index: 1;
 }
 
-/* dunkler Overlay damit Text lesbar bleibt */
+/* Overlay */
 header::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
+  z-index: 0;
 }
 
 header h1 {
   position: relative;
+  z-index: 2;
 }
 
 /* NAV */
@@ -69,11 +72,12 @@ section {
   transition: 0.3s;
 }
 
-/* DARK MODE BUTTON */
+/* 🌙 DARK MODE BUTTON */
 .toggle {
   position: fixed;
   top: 10px;
   right: 10px;
+  z-index: 9999;
   background: #222;
   color: white;
   border: none;
@@ -86,6 +90,7 @@ section {
 
 <body>
 
+<!-- DARK MODE BUTTON -->
 <button class="toggle" onclick="document.body.classList.toggle('dark')">
 🌙 Dark Mode
 </button>
@@ -108,12 +113,12 @@ section {
 <ul>
 <li>Preise gelten nur für Arbeit – Teile bringt der Kunde selbst mit.</li>
 <li>Privatservice ohne Garantie.</li>
-<li>Vorher wird alles besprochen.</li>
+<li>Vor jeder Arbeit wird alles vorher besprochen.</li>
 <li>Preise variieren je nach Roller.</li>
 <li>Reifenarbeiten nur auf Anfrage.</li>
 <li>Vor-Ort-Check möglich (extra).</li>
-<li>Roller steht sicher in Garage.</li>
-<li>Teile nur über bekannte Händler.</li>
+<li>Roller steht sicher in meiner Garage.</li>
+<li>Teile nur über Scooter-Attack, Rollercom, Zweiradteile.net.</li>
 </ul>
 
 </section>
