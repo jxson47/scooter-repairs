@@ -3,30 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Über mich</title>
+<title>Hinweise</title>
 
 <style>
 body {
   font-family: Arial;
   margin: 0;
   background: #f5f5f5;
+  transition: 0.3s;
 }
 
+/* 🌙 DARK MODE */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark section {
+  background: #1e1e1e;
+  color: white;
+}
+
+/* HEADER BANNER */
 header {
-  background: url('banner.jpg') center/cover no-repeat;
+  background: url('hinweise.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 80px 20px;
   position: relative;
 }
 
-header div {
+/* dunkler Overlay damit Text lesbar bleibt */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(0,0,0,0.5);
-  display: inline-block;
-  padding: 30px;
-  border-radius: 10px;
 }
 
+header h1 {
+  position: relative;
+}
+
+/* NAV */
 nav {
   background: #444;
   text-align: center;
@@ -35,27 +54,44 @@ nav {
 
 nav a {
   color: white;
-  margin: 0 15px;
+  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* SECTION */
 section {
   background: white;
   max-width: 900px;
   margin: 20px auto;
   padding: 25px;
   border-radius: 8px;
-  line-height: 1.6;
+  transition: 0.3s;
+}
+
+/* DARK MODE BUTTON */
+.toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<header style="background:url('about.jpg') center/cover no-repeat; color:white; padding:80px 20px; text-align:center;">
-<h1>🧑‍🔧 Über mich</h1>
-<p>Ein kleiner Einblick in meine Arbeit</p>
+<button class="toggle" onclick="document.body.classList.toggle('dark')">
+🌙 Dark Mode
+</button>
+
+<header>
+<h1>⚠️ Hinweise</h1>
 </header>
 
 <nav>
@@ -69,21 +105,16 @@ section {
 
 <section>
 
-<p>Hallo, ich bin Jason und schraube seit etwa 2–3 Jahren an Rollern.</p>
-
-<p>Meine meiste Erfahrung habe ich mit <b>Yamaha Aerox</b>, <b>Peugeot (Liegend)</b> und <b>China 2T Motoren</b>.</p>
-
-<p>Ich habe bereits oft Zylinder gewechselt und kann Vergaser sowie Abstimmungen sorgfältig durchführen.</p>
-
-<p>Die Abstimmung erfolgt bei mir mit Drehzahlmesser, damit der Motor sauber läuft und optimal einkuppelt – egal ob original oder getunt.</p>
-
-<p>Auch Vergaser werden von mir bei Bedarf genau eingestellt, damit der Roller sauber und zuverlässig läuft.</p>
-
-<p>Ich lege großen Wert auf Sicherheit. Deshalb arbeite ich auch bei meinen eigenen Rollern immer mit korrektem Drehmoment und verwende bei wichtigen Schrauben Schraubensicherung (Loctite).</p>
-
-<p>Ich bin kein Profi mit 20 Jahren Werkstatterfahrung, aber ich habe genug praktische Erfahrung, um Roller sauber zu reparieren, aufzubauen und abzustimmen.</p>
-
-<p>Mir ist wichtig, dass alles ordentlich, sicher und mit Verstand gemacht wird.</p>
+<ul>
+<li>Preise gelten nur für Arbeit – Teile bringt der Kunde selbst mit.</li>
+<li>Privatservice ohne Garantie.</li>
+<li>Vorher wird alles besprochen.</li>
+<li>Preise variieren je nach Roller.</li>
+<li>Reifenarbeiten nur auf Anfrage.</li>
+<li>Vor-Ort-Check möglich (extra).</li>
+<li>Roller steht sicher in Garage.</li>
+<li>Teile nur über bekannte Händler.</li>
+</ul>
 
 </section>
 
