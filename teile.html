@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hinweise</title>
+<title>Teile & Shops</title>
 
 <style>
 body {
@@ -21,12 +21,15 @@ body.dark {
 
 body.dark section {
   background: #1e1e1e;
-  color: white;
 }
 
-/* HEADER BANNER */
+body.dark nav {
+  background: #222;
+}
+
+/* HEADER */
 header {
-  background: url('hinweise.jpg') center/cover no-repeat;
+  background: url('teile.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 80px 20px;
@@ -40,7 +43,7 @@ header::before {
   background: rgba(0,0,0,0.5);
 }
 
-header h1 {
+header h1, header p {
   position: relative;
 }
 
@@ -53,7 +56,7 @@ nav {
 
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -61,14 +64,31 @@ nav a {
 /* CONTENT */
 section {
   background: white;
-  max-width: 900px;
+  max-width: 800px;
   margin: 20px auto;
   padding: 25px;
   border-radius: 8px;
+  text-align: center;
   transition: 0.3s;
 }
 
-/* 🌙 BUTTON */
+/* BUTTON LINKS */
+.shop {
+  display: block;
+  margin: 15px 0;
+  padding: 14px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.shop:hover {
+  background: #000;
+}
+
+/* DARK BUTTON */
 .toggle {
   position: fixed;
   top: 10px;
@@ -81,15 +101,16 @@ section {
   border-radius: 6px;
   cursor: pointer;
 }
-
-/* 💾 Dark Mode speichern */
 </style>
 </head>
 
 <body>
 
+<button class="toggle" onclick="toggleDark()">🌙</button>
+
 <header>
-<h1>⚠️ Hinweise</h1>
+<h1>🛒 Teile & Shops</h1>
+<p>Direkt passende Teile online bestellen</p>
 </header>
 
 <nav>
@@ -100,42 +121,35 @@ section {
 <a href="about.html">Über mich</a>
 <a href="kontakt.html">Kontakt</a>
 <a href="teile.html">Teile</a>
-
-<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
 </nav>
 
 <section>
 
-<ul>
-<li>Preise gelten nur für Arbeit – Teile bringt der Kunde selbst mit.</li>
-<li>Privatservice ohne Garantie.</li>
-<li>Vor jeder Arbeit wird alles vorher besprochen.</li>
-<li>Preise variieren je nach Roller.</li>
-<li>Reifenarbeiten nur auf Anfrage.</li>
-<li>Vor-Ort-Check möglich (extra).</li>
-<li>Roller steht sicher in meiner Garage.</li>
-<li>Teile nur über Scooter-Attack, Rollercom, Zweiradteile.net.</li>
-</ul>
+<p><b>Empfohlene Shops für Roller- & Schaltmoped-Teile:</b></p>
+
+<p>
+Hier könnt ihr Ersatzteile, Tuningteile und Zubehör einfach und direkt online bestellen:
+</p>
+
+<a class="shop" href="https://www.scooter-attack.com" target="_blank">
+Scooter-Attack
+</a>
+
+<a class="shop" href="https://www.roller.com" target="_blank">
+Roller.com
+</a>
+
+<a class="shop" href="https://www.zweiradteile.net" target="_blank">
+Zweiradteile.net
+</a>
+
+<p style="margin-top:20px;">
+Auf Wunsch kann ich auch die passenden Teile für euch auswählen und bestellen 👍
+</p>
 
 </section>
 
-<script>
-function toggleDark() {
-  document.body.classList.toggle("dark");
-
-  if(document.body.classList.contains("dark")) {
-    localStorage.setItem("darkmode", "1");
-  } else {
-    localStorage.removeItem("darkmode");
-  }
-}
-
-window.onload = function() {
-  if(localStorage.getItem("darkmode") === "1") {
-    document.body.classList.add("dark");
-  }
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
