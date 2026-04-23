@@ -1,22 +1,110 @@
+/* =========================
+   BASIS
+========================= */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #f5f5f5;
-  color: #000;
-  transition: 0.3s;
+  color: #333;
+  transition: 0.3s ease;
+  line-height: 1.6;
 }
 
-/* ===== HEADER / BANNER ===== */
+/* =========================
+   BESSERE LESBARKEIT
+========================= */
+
+section p,
+section li {
+  font-weight: 500;   /* macht alles etwas fetter */
+}
+
+/* Standort extra hervorheben */
+.standort {
+  font-weight: 800;
+  font-size: 18px;
+  color: #111;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav {
+  background: #444;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+  background: white;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 10px;
+  color: #222;
+}
+
+/* =========================
+   LISTEN
+========================= */
+
+section ul {
+  padding-left: 18px;
+}
+
+section ul li {
+  margin-bottom: 12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+a.button, .shop {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 12px 16px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+a.button:hover,
+.shop:hover {
+  background: #000;
+}
+
+/* =========================
+   BANNER SYSTEM
+========================= */
+
 header.banner {
+  position: relative;
   color: white;
   text-align: center;
-  padding: 80px 20px;
-  position: relative;
+  padding: 90px 20px;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
-/* Overlay */
+/* dunkles Overlay */
 header.banner::before {
   content: "";
   position: absolute;
@@ -24,6 +112,7 @@ header.banner::before {
   background: rgba(0,0,0,0.5);
 }
 
+/* Text bleibt sichtbar */
 header.banner h1,
 header.banner p,
 header.banner div {
@@ -31,7 +120,10 @@ header.banner div {
   z-index: 1;
 }
 
-/* ===== BANNER BILDER ===== */
+/* =========================
+   BANNER BILDER
+========================= */
+
 header.index {
   background-image: url("index.jpg");
 }
@@ -60,47 +152,18 @@ header.teile {
   background-image: url("teile.jpg");
 }
 
-/* ===== NAV ===== */
-nav {
-  background: #444;
-  text-align: center;
-  padding: 10px;
-}
+/* =========================
+   DARK MODE
+========================= */
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-
-/* ===== SECTION ===== */
-section {
-  background: white;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 8px;
-}
-
-/* LISTEN */
-section ul {
-  padding-left: 18px;
-}
-
-section ul li {
-  margin-bottom: 14px;
-  line-height: 1.7;
-}
-
-/* ===== DARK MODE ===== */
 body.dark {
   background: #121212;
-  color: white;
+  color: #f1f1f1;
 }
 
 body.dark section {
   background: #1e1e1e;
+  color: #e6e6e6;
 }
 
 body.dark nav {
@@ -108,5 +171,14 @@ body.dark nav {
 }
 
 body.dark a {
-  color: #ddd;
+  color: #e6e6e6;
+}
+
+body.dark .standort {
+  color: #ffffff;
+}
+
+body.dark a.button,
+body.dark .shop {
+  background: #333;
 }
