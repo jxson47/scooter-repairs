@@ -6,30 +6,81 @@ body {
   transition: 0.3s;
 }
 
-/* SECTION STANDARD */
-section {
-  background: white;
-  color: inherit;
+/* ===== HEADER / BANNER ===== */
+header.banner {
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
 }
 
-/* NAV STANDARD */
+/* Overlay */
+header.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+header.banner h1,
+header.banner p,
+header.banner div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== BANNER BILDER ===== */
+header.index {
+  background-image: url("index.jpg");
+}
+
+header.preise {
+  background-image: url("preise.jpg");
+}
+
+header.hinweise {
+  background-image: url("hinweise.jpg");
+}
+
+header.about {
+  background-image: url("about.jpg");
+}
+
+header.kontakt {
+  background-image: url("kontakt.jpg");
+}
+
+header.roller {
+  background-image: url("roller.jpg");
+}
+
+header.teile {
+  background-image: url("teile.jpg");
+}
+
+/* ===== NAV ===== */
 nav {
   background: #444;
+  text-align: center;
+  padding: 10px;
 }
 
-/* DARK MODE */
-body.dark {
-  background: #121212;
+nav a {
   color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
-body.dark section {
-  background: #1e1e1e;
-  color: white;
-}
-
-body.dark nav {
-  background: #222;
+/* ===== SECTION ===== */
+section {
+  background: white;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 8px;
 }
 
 /* LISTEN */
@@ -42,7 +93,20 @@ section ul li {
   line-height: 1.7;
 }
 
-/* LINKS IM DARK MODE (wichtig!) */
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark section {
+  background: #1e1e1e;
+}
+
+body.dark nav {
+  background: #222;
+}
+
 body.dark a {
   color: #ddd;
 }
