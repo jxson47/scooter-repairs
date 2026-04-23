@@ -5,111 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roller Service</title>
 
-<style>
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #f5f5f5;
-  transition: 0.3s;
-}
-
-/* 🌙 DARK MODE */
-body.dark {
-  background: #121212;
-  color: white;
-}
-
-body.dark section {
-  background: #1e1e1e;
-  color: white;
-}
-
-body.dark nav {
-  background: #222;
-}
-
-body.dark header {
-  filter: brightness(0.7);
-}
-
-/* HEADER */
-header {
-  background: url('index.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-  position: relative;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-header h1, header p {
-  position: relative;
-}
-
-/* NAV */
-nav {
-  background: #444;
-  text-align: center;
-  padding: 10px;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* CONTENT */
-section {
-  background: white;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 8px;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: #222;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-/* BUTTON */
-.toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 9999;
-  background: #222;
-  color: white;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <button class="toggle" onclick="toggleDark()">🌙</button>
 
-<header>
-<h1>🛵 Roller-Service & Reparaturen</h1>
-<p>Reparatur • Wartung • Tuning • Teile</p>
+<header class="banner index">
+  <div class="banner-text">
+    <h1>🛵 Roller-Service & Reparaturen</h1>
+    <p>Reparatur • Wartung • Tuning • Teile</p>
+  </div>
 </header>
 
 <nav>
@@ -128,8 +35,7 @@ section {
 
 <p>🔧 Motor • Ansaugung • Bremsen • Elektrik</p>
 
-<p>🛒 Teile auf Wunsch:
-Scooter-Attack • Roller.com • Zweiradteile.net</p>
+<p>🛒 Teile auf Wunsch: Scooter-Attack • Roller.com • Zweiradteile.net</p>
 
 <p>📍 Standort: <b>47533 Kleve</b></p>
 

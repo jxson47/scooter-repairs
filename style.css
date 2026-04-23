@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #000;
+  transition: 0.3s;
+}
+
+/* SECTION STANDARD */
+section {
+  background: white;
+  color: inherit;
+}
+
+/* NAV STANDARD */
+nav {
+  background: #444;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark section {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark nav {
+  background: #222;
+}
+
+/* LISTEN */
+section ul {
+  padding-left: 18px;
+}
+
+section ul li {
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+/* LINKS IM DARK MODE (wichtig!) */
+body.dark a {
+  color: #ddd;
+}

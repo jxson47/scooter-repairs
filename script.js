@@ -8,8 +8,9 @@ function toggleDark() {
   }
 }
 
-window.onload = function() {
+// stabiler als window.onload
+document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("darkmode") === "on") {
     document.body.classList.add("dark");
   }
-}
+});

@@ -5,104 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hinweise</title>
 
-<style>
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #f5f5f5;
-  transition: 0.3s;
-}
-
-/* 🌙 DARK MODE */
-body.dark {
-  background: #121212;
-  color: white;
-}
-
-body.dark section {
-  background: #1e1e1e;
-  color: white;
-}
-
-body.dark nav {
-  background: #222;
-}
-
-body.dark header {
-  filter: brightness(0.7);
-}
-
-/* HEADER */
-header {
-  background: url('hinweise.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-  position: relative;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-header h1, header p {
-  position: relative;
-}
-
-/* NAV */
-nav {
-  background: #444;
-  text-align: center;
-  padding: 10px;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* CONTENT */
-section {
-  background: white;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-ul {
-  line-height: 1.7;
-}
-
-/* BUTTON */
-.toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 9999;
-  background: #222;
-  color: white;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <button class="toggle" onclick="toggleDark()">🌙</button>
 
-<header>
-<h1>⚠️ Hinweise</h1>
-<p>Wichtige Infos zu Ablauf & Arbeiten</p>
+<header class="banner hinweise">
+  <div class="banner-text">
+    <h1>⚠️ Hinweise</h1>
+    <p>Wichtige Infos zu Ablauf & Arbeiten</p>
+  </div>
 </header>
 
 <nav>
@@ -118,31 +32,36 @@ ul {
 <section>
 
 <ul>
+
 <li><b>Preise gelten nur für die Arbeit</b> – Teile bringt der Kunde selbst mit.</li>
 
-<li><b>Wichtiger Hinweis:</b> Ich bin kein Profi und kann nicht alles perfekt. Bitte erwartet keine Wunder 🙂</li>
+<li><b>Wichtiger Hinweis:</b> Ich bin kein Profi und kann nicht alles perfekt. Bitte keine Wunder erwarten 🙂</li>
 
 <li><b>Privatservice</b> – keine Garantie auf Teile oder Motor.</li>
 
-<li>Bei speziellen Arbeiten oder unklarem Aufwand wird alles vorher gemeinsam besprochen.</li>
+<li>Bei schwierigen oder unklaren Arbeiten wird vorher alles genau besprochen.</li>
 
 <li>Preise können je nach Roller und Aufwand variieren.</li>
 
-<li>Weitere Arbeiten (z. B. Reifenwechsel) sind auf Anfrage möglich – Erfahrung hierbei ist begrenzt.</li>
+<li>Reifenarbeiten sind nur nach Absprache möglich (Erfahrung ist begrenzt).</li>
 
-<li>Auf Anfrage komme ich auch vor Ort vorbei und schaue mir den Roller an (gegen Aufpreis).</li>
-
-<li>Während der Reparatur steht der Roller sicher in meiner Garage.</li>
-
-<li>Auf Wunsch kann eine schriftliche Bestätigung erstellt werden (z. B. als Sicherheit für den Kunden).</li>
-
-<li>Teile können auch über mich bestellt werden – ausschließlich bei:
-<br>• Scooter-Attack
-<br>• Roller.com
-<br>• Zweiradteile.net
+<li>
+<b>Teilebestellung über mich:</b><br><br>
+Die passenden Teile können direkt über mich bestellt werden.<br>
+Ich wähle und bestelle die benötigten Teile ausschließlich über:<br>
+• Scooter-Attack<br>
+• Roller.com<br>
+• Zweiradteile.net
 </li>
 
-<li>Arbeiten an Mofas und Schaltmopeds sind möglich, jedoch habe ich hier bisher wenig Erfahrung.</li>
+<li>Vor-Ort-Check möglich (nach Absprache & gegen Aufpreis).</li>
+
+<li>Der Roller steht während der Arbeit sicher in meiner Garage.</li>
+
+<li>Auf Wunsch kann eine schriftliche Bestätigung erstellt werden (für Ihre und meine Sicherheit).</li>
+
+<li>Arbeiten an Mofas & Schaltmopeds kann ich nach Absprache übernehmen.</li>
+
 </ul>
 
 </section>

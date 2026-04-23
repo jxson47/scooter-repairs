@@ -5,120 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kontakt</title>
 
-<style>
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #f5f5f5;
-  transition: 0.3s;
-}
-
-/* 🌙 DARK MODE */
-body.dark {
-  background: #121212;
-  color: white;
-}
-
-body.dark section {
-  background: #1e1e1e;
-  color: white;
-}
-
-body.dark nav {
-  background: #222;
-}
-
-body.dark header {
-  filter: brightness(0.7);
-}
-
-body.dark a.button {
-  background: #222;
-}
-
-/* HEADER */
-header {
-  background: url('kontakt.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-  position: relative;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-header div {
-  position: relative;
-  display: inline-block;
-  padding: 40px;
-}
-
-/* NAV */
-nav {
-  background: #444;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* CONTENT */
-section {
-  background: white;
-  max-width: 700px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-/* BUTTONS */
-a.button {
-  display: block;
-  margin: 15px 0;
-  padding: 12px;
-  background: #444;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  text-align: center;
-}
-
-/* DARK MODE BUTTON */
-.toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 9999;
-  background: #222;
-  color: white;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <button class="toggle" onclick="toggleDark()">🌙</button>
 
-<header>
-<div>
-<h1>📞 Kontakt</h1>
-<p>Schreib mir direkt – schnell & unkompliziert</p>
-</div>
+<header class="banner kontakt">
+  <div class="banner-text">
+    <h1>📞 Kontakt</h1>
+    <p>Schreib mir direkt – schnell & unkompliziert</p>
+  </div>
 </header>
 
 <nav>
@@ -133,7 +31,7 @@ a.button {
 
 <section>
 
-<a class="button" href="mailto:jasonlem47533@gmail.com">📧 Email</a>
+<a class="button" href="mailto:jasonlem47533@gmail.com">📧 E-Mail</a>
 <a class="button" href="https://wa.me/4915774457154">💬 WhatsApp</a>
 <a class="button" href="https://instagram.com/_jxson.47_" target="_blank">📸 Instagram</a>
 
