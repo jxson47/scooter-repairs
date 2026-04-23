@@ -1,3 +1,4 @@
+
 function toggleDark() {
   document.body.classList.toggle("dark");
 
@@ -18,23 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =========================
-  // NAVIGATION LADEN
+  // NAVIGATION LADEN (MOBILE SAFE)
   // =========================
   fetch("nav.html")
-    .then(res => res.text())
+    .then(res => {
+      if (!res.ok) throw new Error("Nav nicht gefunden");
+      return res.text();
+    })
     .then(data => {
       const nav = document.getElementById("nav");
-      if (nav) nav.innerHTML = data;
+      if (nav) {
+        nav.innerHTML = data;
+      }
+    })
+    .catch(err => {
+      console.warn("Navigation Fehler:", err);
     });
 
   // =========================
-  // BACK BUTTON (FIXED)
+  // BACK BUTTON (SAFE)
   // =========================
-
-  // Dateiname ermitteln (wichtig für GitHub Pages!)
   const page = location.pathname.split("/").pop();
 
-  // nur anzeigen wenn NICHT index.html
   if (page && page !== "index.html") {
     const backBtn = document.createElement("div");
     backBtn.className = "back-box";
