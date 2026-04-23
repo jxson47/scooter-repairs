@@ -24,7 +24,15 @@ body.dark section {
   color: white;
 }
 
-/* HEADER BANNER */
+body.dark nav {
+  background: #222;
+}
+
+body.dark header {
+  filter: brightness(0.7);
+}
+
+/* HEADER */
 header {
   background: url('hinweise.jpg') center/cover no-repeat;
   color: white;
@@ -40,7 +48,7 @@ header::before {
   background: rgba(0,0,0,0.5);
 }
 
-header h1 {
+header h1, header p {
   position: relative;
 }
 
@@ -68,7 +76,11 @@ section {
   transition: 0.3s;
 }
 
-/* 🌙 BUTTON */
+ul {
+  line-height: 1.7;
+}
+
+/* BUTTON */
 .toggle {
   position: fixed;
   top: 10px;
@@ -81,15 +93,16 @@ section {
   border-radius: 6px;
   cursor: pointer;
 }
-
-/* 💾 Dark Mode speichern */
 </style>
 </head>
 
 <body>
 
+<button class="toggle" onclick="toggleDark()">🌙</button>
+
 <header>
 <h1>⚠️ Hinweise</h1>
+<p>Wichtige Infos zu Ablauf & Arbeiten</p>
 </header>
 
 <nav>
@@ -100,42 +113,41 @@ section {
 <a href="about.html">Über mich</a>
 <a href="kontakt.html">Kontakt</a>
 <a href="teile.html">Teile</a>
-
-<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
 </nav>
 
 <section>
 
 <ul>
-<li>Preise gelten nur für Arbeit – Teile bringt der Kunde selbst mit.</li>
-<li>Privatservice ohne Garantie.</li>
-<li>Vor jeder Arbeit wird alles vorher besprochen.</li>
-<li>Preise variieren je nach Roller.</li>
-<li>Reifenarbeiten nur auf Anfrage.</li>
-<li>Vor-Ort-Check möglich (extra).</li>
-<li>Roller steht sicher in meiner Garage.</li>
-<li>Teile nur über Scooter-Attack, Rollercom, Zweiradteile.net.</li>
+<li><b>Preise gelten nur für die Arbeit</b> – Teile bringt der Kunde selbst mit.</li>
+
+<li><b>Wichtiger Hinweis:</b> Ich bin kein Profi und kann nicht alles perfekt. Bitte erwartet keine Wunder 🙂</li>
+
+<li><b>Privatservice</b> – keine Garantie auf Teile oder Motor.</li>
+
+<li>Bei speziellen Arbeiten oder unklarem Aufwand wird alles vorher gemeinsam besprochen.</li>
+
+<li>Preise können je nach Roller und Aufwand variieren.</li>
+
+<li>Weitere Arbeiten (z. B. Reifenwechsel) sind auf Anfrage möglich – Erfahrung hierbei ist begrenzt.</li>
+
+<li>Auf Anfrage komme ich auch vor Ort vorbei und schaue mir den Roller an (gegen Aufpreis).</li>
+
+<li>Während der Reparatur steht der Roller sicher in meiner Garage.</li>
+
+<li>Auf Wunsch kann eine schriftliche Bestätigung erstellt werden (z. B. als Sicherheit für den Kunden).</li>
+
+<li>Teile können auch über mich bestellt werden – ausschließlich bei:
+<br>• Scooter-Attack
+<br>• Roller.com
+<br>• Zweiradteile.net
+</li>
+
+<li>Arbeiten an Mofas und Schaltmopeds sind möglich, jedoch habe ich hier bisher wenig Erfahrung.</li>
 </ul>
 
 </section>
 
-<script>
-function toggleDark() {
-  document.body.classList.toggle("dark");
-
-  if(document.body.classList.contains("dark")) {
-    localStorage.setItem("darkmode", "1");
-  } else {
-    localStorage.removeItem("darkmode");
-  }
-}
-
-window.onload = function() {
-  if(localStorage.getItem("darkmode") === "1") {
-    document.body.classList.add("dark");
-  }
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
